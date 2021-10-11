@@ -3,16 +3,15 @@ const usercredentials=require('./user.credentials');
 
 exports.sendVerificationMail= function (email,url){
     return new Promise(async function(resolve,reject){
-
-            // create reusable transporter object using the default SMTP transport
+          
             let transporter = nodemailer.createTransport({
-            //  host: "smtp.ethereal.email",
+            
               service:"gmail",
               port: 587,
               secure: false, // true for 465, false for other ports
               auth: {
-                user: usercredentials.email, // generated ethereal user
-                pass: usercredentials.password, // generated ethereal password
+                user: usercredentials.email, 
+                pass: usercredentials.password, 
               },
             });
           
@@ -42,14 +41,7 @@ exports.sendVerificationMail= function (email,url){
                 reject()
             }
             
-            // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-          
-            // Preview only available when sending through an Ethereal account
-         //   console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-            // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
-          
-          
-         // main().catch(console.error);
+           
 
     })
 } 

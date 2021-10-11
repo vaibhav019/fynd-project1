@@ -75,7 +75,7 @@ exports.login = function(req,res){
         }
        
     },function(error){
-        res.status(500).send({
+        res.status(500).send({error
         })
     })
 }
@@ -95,7 +95,7 @@ exports.allusers = function(req,res){
         }
        
     },function(error){
-        res.status(500).send({
+        res.status(500).send({error
         })
     })
     
@@ -103,10 +103,10 @@ exports.allusers = function(req,res){
 exports.verify= function(req,res){
     var token=req.query.token
     console.log('#######################################')
-    //retrive email from token
+
     Authservice.verifyToken(token,function(error,payload){
         if(error){
-            res.status(500).send()
+            res.status(500).send(error)
         }else{
             Userservice.verifyuser(payload.email).then(function(result){
             res.send({"message":"user verified","data":result})

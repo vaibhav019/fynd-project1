@@ -7,7 +7,7 @@ exports.addemployee = function (req, res) {
    console.log(req.body);
 
     EmployeeService.addemployee(req.body).then(function (result) {
-        console.log('............Cover Controller data added to DB..........')
+        console.log('............addemployee Controller data added to DB..........')
         res.send({
             "Message" :"data added to DB",
             "data":result
@@ -31,7 +31,7 @@ exports.getallemployeebycode=function(req,res){
     console.log('.............controller- Getting Brand name for for returning cover............')
     console.log("params is",req.query)
     EmployeeService.getallemployeebycode(req.query).then(function(data){
-      //  console.log('see all cover of brand  ::: ',req.body.title)
+      
         res.send({
             "Message":"see all employee ",
             "Message1":data
