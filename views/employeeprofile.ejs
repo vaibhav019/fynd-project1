@@ -1,0 +1,50 @@
+
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    
+    
+
+    <div class="container">
+        <% for(var i=0; i < data.length; i++) { %>
+      <div class="row m-3">
+        <div class="col-4"><img src="http://res.cloudinary.com/dnylflyhu/image/upload/v1633893710/tzzmvbock4r1iwun8iuk.jpg" alt="profile" width="200pxS" height="250px"></div>
+        <div class="col-8">
+          <div class="row">
+            <div class="col">FullName</div>
+            <div class="col"><%=data[i].fullName%></div>
+          </div>
+          <div class="row">
+            <div class="col">Email</div>
+            <div class="col"><%=data[i].email%></div>
+          </div>
+          <div class="row">
+            <div class="col">Mobile</div>
+            <div class="col"><%=data[i].mobile%></div>
+          </div>
+          <div class="row">
+            <div class="col">City</div>
+            <div class="col"><%=data[i].city%></div>
+          </div>
+          <div class="row">
+            <div class="col">Salary</div>
+            <div class="col"><%=data[i].salary%></div>
+          </div>
+          <div class="row">
+            <div class="col">EmployeeCode</div>
+            <div class="col"><%=data[i].employeeCode%></div>
+          </div>
+          <div class="row">
+            <div class="col">Department</div>
+            <div class="col"><%=data[i].department%></div>
+          </div>
+        </div>
+      </div>
+      <%}%>
+    </div>
+   
