@@ -15,7 +15,7 @@ exports.sendVerificationMail= function (email,url){
               },
             });
           
-            // send mail with defined transport object
+            
             try{
                 let info = await transporter.sendMail({
                     from: '"No REply ??"', // sender address
